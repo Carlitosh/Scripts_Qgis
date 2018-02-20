@@ -27,9 +27,17 @@ for feature in iter:
     
 var2 = np.asarray([var])
 var4 = np.asarray([var3])
+errores = var4 - var2
+
 print ""
 print "El R2 es de: ", np.corrcoef(var2,var4)[0][1]
-print ""
 print "El RMSE es de: " , np.sqrt(((var4 - var2) ** 2).mean())
+print "El error aritmetico medio es de ",(var4 - var2).mean()
+print "El Desvio Estandar de los errores es de ", np.std(errores)
+print "Nombre de la columna predichos: ",Predichos
+print "Nombre de la columna observados: ",Observados
+print ""
+
+
 
 
